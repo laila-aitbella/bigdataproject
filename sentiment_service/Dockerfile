@@ -1,10 +1,16 @@
 FROM python:3.10
 
 WORKDIR /app
+COPY . /app
 
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install kafka-python pymongo
 
-COPY . .
+CMD ["python", "consumer.py"]
+FROM python:3.10
 
-CMD ["python", "sentiment.py"]
+WORKDIR /app
+COPY . /app
+
+RUN pip install kafka-python pymongo
+
+CMD ["python", "Consumer.py"]
