@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env
+.env.local
+.vscode/
+
+# Python
+*.log
+
+# Docker
+**/data/
+**/tmp/
+
+# Mongo (si un dossier existe)
+mongo_data/
